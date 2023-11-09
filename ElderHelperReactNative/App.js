@@ -12,6 +12,7 @@ import Profile from "./Components/Profile";
 import PostJob from "./Components/PostJob";
 import SingleJob from "./Components/SingleJob";
 import JobsMap from "./Components/JobsMap";
+import Login from "./Components/Login";
 
 const Tab = createBottomTabNavigator();
 const Stack = createStackNavigator();
@@ -169,6 +170,7 @@ export default function App() {
   return (
     <NavigationContainer>
       <UserContext>
+        <Login />
         <TabNavigator />
       </UserContext>
     </NavigationContainer>
