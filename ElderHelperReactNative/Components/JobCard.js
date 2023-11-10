@@ -61,7 +61,7 @@ export default function JobCard({ press, setPress, navigation }) {
       elder_id: 5,
       helper_id: 105,
       status_id: 1,
-      postcode: "M23",
+      postcode: "M30",
     },
     {
       job_title: "House Cleaning",
@@ -72,7 +72,7 @@ export default function JobCard({ press, setPress, navigation }) {
       elder_id: 6,
       helper_id: 106,
       status_id: 4,
-      postcode: "M6",
+      postcode: "M30",
     },
     {
       job_title: "Outdoor Activities",
@@ -83,7 +83,7 @@ export default function JobCard({ press, setPress, navigation }) {
       elder_id: 7,
       helper_id: 107,
       status_id: 1,
-      postcode: "M7",
+      postcode: "M30",
     },
     {
       job_title: "Pet Care",
@@ -231,41 +231,39 @@ export default function JobCard({ press, setPress, navigation }) {
 
   return (
     <ScrollView
-      horizontal={true}
+      horizontal
       snapToInterval={140}
       style={styles.cardContainer}
       scrollEventThrottle={1}
       contentContainerStyle={styles.endPadding}
     >
-      <View>
-        {filteredJobs.length === 0 ? (
-          press ? (
-            <Text style={styles.noJobsText}> No jobs in {press}</Text>
-          ) : (
-            <Text>Choose an area</Text>
-          )
+      {filteredJobs.length === 0 ? (
+        press ? (
+          <Text style={styles.noJobsText}> No jobs in {press}</Text>
         ) : (
-          filteredJobs.map((job, index) => (
-            <View key={index} style={styles.card}>
-              <Text style={styles.title}>{job.job_title}</Text>
-              <Text style={styles.description} numberOfLines={3}>
-                {job.job_desc}
-              </Text>
-              <Button
-                title="more info"
-                style={styles.button}
-                onPress={() => navigation.navigate("SingleJob")}
-              />
-            </View>
-          ))
-        )}
-        <Button
-          title={"reset"}
-          onPress={() => {
-            setPress("");
-          }}
-        />
-      </View>
+          <Text>Choose an area</Text>
+        )
+      ) : (
+        filteredJobs.map((job, index) => (
+          <View key={index} style={styles.card}>
+            <Text style={styles.title}>{job.job_title}</Text>
+            <Text style={styles.description} numberOfLines={3}>
+              {job.job_desc}
+            </Text>
+            <Button
+              title="more info"
+              style={styles.button}
+              onPress={() => navigation.navigate("SingleJob")}
+            />
+          </View>
+        ))
+      )}
+      <Button
+        title={"reset"}
+        onPress={() => {
+          setPress("");
+        }}
+      />
     </ScrollView>
   );
 }
@@ -303,12 +301,10 @@ const styles = StyleSheet.create({
   },
   cardContainer: {
     flexWrap: "wrap",
-    // height: 200,
     bottom: 0,
-    marginBottom: 80,
+    marginBottom: 120,
     position: "absolute",
     flexDirection: "row",
-    width: "100%",
   },
   endPadding: {
     padding: 10,

@@ -1,5 +1,5 @@
 import React from "react";
-import { Text, View, StyleSheet } from "react-native";
+import { Text, View, StyleSheet, TouchableHighlight } from "react-native";
 import MapView, { PROVIDER_GOOGLE, Polygon } from "react-native-maps";
 import ManchesterPostcodes from "../assets/ManchesterPostcodes.json";
 import * as Location from "expo-location";
@@ -41,6 +41,12 @@ export default function JobsMap() {
   };
   const [press, setPress] = useState("");
 
+  const [selectedPolygon, setSelectedPolygon] = useState(null);
+
+  const handlePolygonPress = (polygonId) => {
+    setSelectedPolygon(polygonId);
+  };
+
   return (
     <View style={styles.view}>
       <Text style={styles.text}>{text}</Text>
@@ -70,11 +76,16 @@ export default function JobsMap() {
               tappable
               key={area.properties.name}
               coordinates={coordinates}
-              fillColor="rgba(0, 200, 0, 0.5)"
+              fillColor={
+                selectedPolygon === area.properties.name
+                  ? "#0072BB"
+                  : "rgba(0, 200, 0 ,0.5"
+              }
               strokeColor="rgba(0,0,0,0.5)"
               strokeWidth={2}
               onPress={(event) => {
                 handlePress(event._targetInst.return.key);
+                handlePolygonPress(area.properties.name);
               }}
             />
           );
