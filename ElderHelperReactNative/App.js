@@ -1,4 +1,3 @@
-import { StyleSheet } from "react-native";
 import React from "react";
 import { NavigationContainer } from "@react-navigation/native";
 import { createStackNavigator } from "@react-navigation/stack";
@@ -33,16 +32,3 @@ export default function App() {
     </UserContext>
   );
 }
-
-const styles = StyleSheet.create({
-  shadow: {
-    shadowColor: "#7F5DF0",
-    shadowOffset: {
-      width: 0,
-      height: 0,
-    },
-    shadowOpacity: 0.25,
-    shadowRadius: 3.5,
-    elevation: 5,
-  },
-});
