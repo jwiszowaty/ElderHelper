@@ -15,11 +15,13 @@ import { getExistingUser } from "../api";
 import { AntDesign } from "@expo/vector-icons";
 import { Ionicons } from "@expo/vector-icons";
 import { TouchableOpacity } from "react-native-gesture-handler";
+import Loading from "./Loading";
 
 export default function Login({ navigation }) {
   const [numberLogin, onChangeNumberLogin] = useState("");
   const [passwordLogin, onChangePasswordLogin] = useState("");
   const [userDoesNotExist, setUserDoesNotExist] = useState(false);
+  const [isLoading, setIsLoading] = useState(false);
 
   const validate = () => {
     if (!numberLogin || !passwordLogin) {
@@ -31,8 +33,10 @@ export default function Login({ navigation }) {
   const { userId, setUserId } = useContext(CurrentUser);
 
   const handleLogin = () => {
+    setIsLoading(true);
     getExistingUser(numberLogin)
       .then(({ user }) => {
+        setIsLoading(false);
         setUserId(user);
         setUserDoesNotExist(false);
         Alert.alert(
@@ -57,7 +61,9 @@ export default function Login({ navigation }) {
   const handleSignUpLinkPress = () => {
     navigation.navigate("SignUp");
   };
-  return (
+  return isLoading ? (
+    <Loading />
+  ) : (
     <SafeAreaView style={{ backgroundColor: "#9DD8E7", height: "100%" }}>
       <ScrollView
         contentContainerStyle={{
