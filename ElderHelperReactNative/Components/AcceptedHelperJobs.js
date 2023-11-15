@@ -40,7 +40,7 @@ export default function ElderJobs() {
               </Text>
               <Text style={styles.jobTextExp}>
                 {" "}
-                Expires:{" "}
+                Expires{" "}
                 {moment(job.expiry_date.slice(0, 10)).endOf("day").fromNow()}
               </Text>
             </View>
