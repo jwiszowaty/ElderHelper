@@ -9,28 +9,28 @@ Through this project we gained experience in
 - navigation within the app
 - 
 # Prerequsites
-   - react-native-async-storage/async-storage 1.18.2
-    react-navigation/bottom-tabs              6.5.11
-    react-navigation/native                   6.1.9
-    react-navigation/native-stack             6.9.17
-    react-navigation/stack 6.3.20
-    axios 1.6.1
-    expo 49.0.15
-    expo-location 16.1.0
-    metro-config 0.80.0
-    moment 2.29.4
-    react 18.2.0
-    react-native 0.72.6
-    react-native-geojson 0.1.1
-    react-native-gesture-handler 2.12.0
-    react-native-location 2.5.0
-    react-native-maps 1.7.1
-    react-native-modern-datepicker 1.0.0-beta.91
-    react-native-picker-select 9.0.0
-    react-native-safe-area-context 4.6.3
-    react-native-screens "3.22.0
-    "react-navigation "5.0.0
-    "socket.io-client "4.7.2
+- react-native-async-storage/async-storage 1.18.2
+- react-navigation/bottom-tabs-           6.5.11
+- react-navigation/native- - - -    6.1.9
+- react-navigation/native-stack- - -  6.9.17
+- react-navigation/stack 6.3.20
+- axios 1.6.1
+- expo 49.0.15
+- expo-location 16.1.0
+- metro-config 0.80.0
+- moment 2.29.4
+- react 18.2.0
+- react-native 0.72.6
+- react-native-geojson 0.1.1
+- react-native-gesture-handler 2.12.0
+- react-native-location 2.5.0
+- react-native-maps 1.7.1
+- react-native-modern-datepicker 1.0.0-beta.91
+- react-native-picker-select 9.0.0
+- react-native-safe-area-context 4.6.3
+- react-native-screens 3.22.0
+- react-navigation 5.0.0
+- socket.io-client 4.7.2
 # Hosted version
 # Installation guide
   General
