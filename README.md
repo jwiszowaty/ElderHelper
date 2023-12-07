@@ -13,3 +13,4 @@
   General
 # Usage
 # Credits
+- Created by [Jakub Wiszowaty](https://github.com/jwiszowaty), [Layla Kawafi](https://github.com/layla93k), [Yulia Volkovaya](https://github.com/yvevolk), [Stanley Leung](https://github.com/27stanley), [Leigh Keating](https://github.com/lkeating26) and [Emma Johnston](https://github.com/emmajohnston93)
