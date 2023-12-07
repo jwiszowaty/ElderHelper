@@ -1,3 +1,4 @@
+<img width="209" alt="Picture 1" src="https://github.com/jwiszowaty/ElderHelper-frontend/assets/136580602/af96a4fb-d52a-45d6-b205-c10507941751"></br>
 # ElderHelper-frontend
 "Elder Helper" is a mobile application for two types of users: those who need assistance and those who are willing to offer a helping hand. 
 The "Elders" or their caregivers can create an account on the platform and post jobs or tasks that require assistance. The "helpers" are kind-hearted volunteers in the community who can create accounts as well. They can browse through the posted jobs on a list or map and accept the ones according to their skills and availability. 
